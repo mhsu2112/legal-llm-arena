@@ -1,0 +1,34 @@
+{
+  "name": "legal-llm-arena",
+  "version": "1.0.0",
+  "description": "A comprehensive platform for evaluating and comparing LLMs on legal reasoning tasks",
+  "private": true,
+  "workspaces": [
+    "shared",
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "install:all": "npm install && cd shared && npm install && cd ../backend && npm install && cd ../frontend && npm install",
+    "build:shared": "cd shared && npm run build",
+    "build:backend": "cd backend && npm run build",
+    "build:frontend": "cd frontend && npm run build",
+    "build": "npm run build:shared && npm run build:backend && npm run build:frontend",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
+    "seed": "cd backend && npm run build && node dist/database/seed.js",
+    "start:backend": "cd backend && npm start",
+    "start:frontend": "cd frontend && npm run preview"
+  },
+  "keywords": [
+    "legal",
+    "llm",
+    "ai",
+    "evaluation",
+    "arena",
+    "elo",
+    "typescript"
+  ],
+  "author": "",
+  "license": "MIT"
+}
